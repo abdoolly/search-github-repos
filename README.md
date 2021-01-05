@@ -23,8 +23,8 @@ this will create a folder called vendor with all the dependencies the project ne
 
 ## Configuration
 
-make sure you copy the file .env.example
-and rename it to .env no special config required in this step so, just leave it as it is.
+make sure you copy the file `.env.example`
+and rename it to `.env` no special config required in this step so, just leave it as it is.
 
 ## Start the backend
 
