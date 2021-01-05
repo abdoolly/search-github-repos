@@ -61,11 +61,11 @@ GET /search/repos
 Parameter Name | type | mandatory | example | description | 
 --- | --- |--- | --- |--- | 
 top | integer | false | ?top=10 |this parameter how many results come back so top=10 will return 10 repositories |
-langs | string comma separated | false | langs=javascript,typescript or langs=java |this is a string comma separated for multiple languages and it filters the incoming repositories by the programming language |
-searchTerm | string | true if langs exist and no date specified | searchTerm=express |this paramters makes sure that the repo name include that search term and it's required if the langs field is specified and the date field is not otherwise it's optional|
-date | date | false | date=2020-05-01 | this accepts any standard day format it get all repos that it's created_at is after that date |
+langs | string comma separated | false | ?langs=javascript,typescript or langs=java |this is a string comma separated for multiple languages and it filters the incoming repositories by the programming language |
+searchTerm | string | true if langs exist and no date specified | ?searchTerm=express |this paramters makes sure that the repo name include that search term and it's required if the langs field is specified and the date field is not otherwise it's optional|
+date | date | false | ?date=2020-05-01 | this accepts any standard day format it get all repos that it's created_at is after that date |
 
-All paramters above can be made in one query like that for example
+All parameters above can be made in one query like that for example
 
 ```
 /search/repos?top=10&langs=javascript,typescript&date=2020-01-01&searchTerm=laravel
