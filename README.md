@@ -32,7 +32,7 @@ this will create a folder called vendor with all the dependencies the project ne
 
 or build using docker
 ```
-docker build -t search-repo .
+docker build --target run -t search-repo .
 ```
 
 ## Start the backend
@@ -62,6 +62,18 @@ phpunit
 
 or you can configure phpunit in Phpstorm then open the tests folder
 and select the GithubTest.php which has all the tests.
+
+### using docker
+or you can use docker to run the tests using the test stage
+
+this will run two commands the build choosing the target test 
+then run it to run the tests.
+
+```
+docker build --target test -t search-repo .
+
+docker run search-repo
+```
 
 ## API Docs
 
