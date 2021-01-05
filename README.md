@@ -11,6 +11,15 @@ he can also filter by date or programming language.
 - composer 2.0
 - phpunit for testing
 
+or just install 
+
+- docker
+
+## Configuration
+
+make sure you copy the file `.env.example`
+and rename it to `.env` no special config required in this step so, just leave it as it is.
+
 ## Installation
 
 run the dependency installation command
@@ -21,10 +30,10 @@ composer install
 
 this will create a folder called vendor with all the dependencies the project need to start
 
-## Configuration
-
-make sure you copy the file `.env.example`
-and rename it to `.env` no special config required in this step so, just leave it as it is.
+or build using docker
+```
+docker build -t search-repo .
+```
 
 ## Start the backend
 
@@ -33,6 +42,12 @@ To start the backend run the following command
 ```
 php -S localhost:8000 -t public
 ``` 
+
+or use docker to run it but, make sure you have ran the docker build command above
+
+```
+docker run -d -p 8000:8000 search-repo
+```
 
 This will start the server on the following link [http://localhost:8000](http://localhost:8000)
 
